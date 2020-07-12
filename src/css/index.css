@@ -1,0 +1,12 @@
+@import 'tailwindcss/base';
+
+h1 {
+  @apply text-xl text-gray-900 font-bold;
+}
+
+p {
+  @apply text-base text-gray-700;
+}
+
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

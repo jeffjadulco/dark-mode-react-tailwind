@@ -4,5 +4,5 @@ module.exports = {
     description: `An example of dark mode implementation in React and Tailwind`,
     author: `@jeffjadulco`,
   },
-  plugins: [],
+  plugins: [`gatsby-plugin-postcss`],
 }
