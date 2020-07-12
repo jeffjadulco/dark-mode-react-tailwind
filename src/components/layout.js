@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
     <>
       <ThemeProvider>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div className="container max-w-screen-lg mx-auto">
+        <div className="container max-w-screen-lg mx-auto px-10">
           <main className="mt-4">{children}</main>
           <footer className="text-primary">
             © {new Date().getFullYear()}, Built with

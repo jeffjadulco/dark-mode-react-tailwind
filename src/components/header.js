@@ -4,7 +4,7 @@ import React from 'react'
 import { Toggle } from './toggle'
 
 const Header = ({ siteTitle }) => (
-  <header className="bg-secondary">
+  <header className="bg-secondary px-10">
     <div className="container max-w-screen-lg mx-auto py-6 flex justify-between">
       <h1>
         <Link to="/" className="text-accent">
