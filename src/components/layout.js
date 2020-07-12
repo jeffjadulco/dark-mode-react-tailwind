@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import { ThemeProvider } from './themeContext'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -17,15 +18,17 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="container max-w-screen-lg mx-auto">
-        <main className="mt-4">{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <ThemeProvider>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div className="container max-w-screen-lg mx-auto">
+          <main className="mt-4">{children}</main>
+          <footer className="text-primary">
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </footer>
+        </div>
+      </ThemeProvider>
     </>
   )
 }

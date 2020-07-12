@@ -1,11 +1,43 @@
+:root {
+  @apply .dark;
+}
+
+.dark {
+  --color-bg-primary: #2d3748;
+  --color-bg-secondary: #283141;
+  --color-text-primary: #f7fafc;
+  --color-text-secondary: #e2e8f0;
+  --color-text-accent: #81e6d9;
+}
+
+.light {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #edf2f7;
+  --color-text-primary: #2d3748;
+  --color-text-secondary: #4a5568;
+  --color-text-accent: #2b6cb0;
+}
+
 @import 'tailwindcss/base';
 
+body {
+  @apply antialiased bg-primary;
+}
+
 h1 {
-  @apply text-xl text-gray-900 font-bold;
+  @apply font-bold text-primary text-xl;
 }
 
 p {
-  @apply text-base text-gray-700;
+  @apply text-secondary;
+}
+
+a {
+  @apply text-secondary font-semibold;
+}
+
+a:hover {
+  @apply text-accent;
 }
 
 @import 'tailwindcss/components';
